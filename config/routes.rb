@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get "categories/new", to: "categories#new", as: :new_category
   get "transactions/new", to: "transactions#new", as: :new_transaction
 
+  post "categories", to: "categories#create"
 
   delete "logout", to: "devise/sessions#destroy", as: :logout
 
