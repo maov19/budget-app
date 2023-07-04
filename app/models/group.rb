@@ -1,6 +1,6 @@
 class Group < ApplicationRecord
-  has_many :operations
-  has_and_belongs_to_many :operations
+  has_many :group_operations
+  has_many :operations, through: :group_operations
 
   validates :name, presence: true
   validates :icon, presence: true
