@@ -14,7 +14,7 @@
         <td><%= category.name %></td>
         <td><%= category.icon %></td>
         <td><%= category.operations.sum(:amount) %></td>
-        <td><%= link_to 'View Transactions', transactions_path(category_id: category.id) %></td>
+        <td><%= link_to 'View Transactions', category_transactions_path(category_id: category.id) %></td>
       </tr>
     <% end %>
   </tbody>

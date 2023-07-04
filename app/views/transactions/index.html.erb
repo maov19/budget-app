@@ -21,6 +21,6 @@
   </tbody>
 </table>
 
-<%= link_to "Add a new transaction", new_transaction_path(category_id: @category.id), class: "btn btn-primary" %>
-<%= link_to "< Back", home_path, class: "btn btn-secondary" %>
+<%= link_to "Add a new transaction", new_category_transaction_path(category_id: @category.id), class: "btn btn-primary" %>
+<%= link_to "< Back", categories_path, class: "btn btn-secondary" %>
 

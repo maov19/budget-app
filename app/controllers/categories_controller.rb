@@ -12,7 +12,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Group.new(category_params)
     if @category.save
-      redirect_to home_path, notice: 'Category created!'
+      redirect_to categories_path, notice: 'Category created!'
     else
       render :new_category_page
     end
