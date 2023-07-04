@@ -1,5 +1,20 @@
-<h1>Transactions#transactions_page</h1>
-<p>Find me in app/views/transactions/transactions_page.html.erb</p>
+<h1>Transactions for Category: <%= @category.name %></h1>
 
-<p>I am a transactions page</p>
-
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @transactions.each do |transaction| %>
+      <tr>
+        <td><%= transaction.name %></td>
+        <td><%= transaction.amount %></td>
+        <td><%= transaction.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
