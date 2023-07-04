@@ -5,8 +5,5 @@ class CategoriesController < ApplicationController
     @group = Group.all
   end
 
-  def new_category_page; 
-  end
-
-
+  def new_category_page; end
 end

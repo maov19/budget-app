@@ -3,7 +3,8 @@ class TransactionsController < ApplicationController
 
   def transactions_page
     @category = Group.find(params[:category_id])
-    @transactions = @category.operations
+    @transactions = @category.operations.order(created_at: :desc)
+    @total_amount = @transactions.sum(:amount)
   end
 
   def index

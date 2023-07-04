@@ -4,5 +4,5 @@ class Operation < ApplicationRecord
   has_many :groups, through: :group_operations
 
   validates :name, presence: true
-  validates :amount, presence: true, numericality: { allow_nil: false}
+  validates :amount, presence: true, numericality: { allow_nil: false }
 end

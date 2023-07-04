@@ -1,5 +1,7 @@
 <h1>Transactions for Category: <%= @category.name %></h1>
 
+<p>Total Amount: <%= @total_amount %></p>
+
 <table>
   <thead>
     <tr>
@@ -18,3 +20,7 @@
     <% end %>
   </tbody>
 </table>
+
+<%= link_to "Add a new transaction", new_transaction_path(category_id: @category.id), class: "btn btn-primary" %>
+<%= link_to "< Back", home_path, class: "btn btn-secondary" %>
+
