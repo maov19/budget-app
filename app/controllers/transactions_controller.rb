@@ -22,18 +22,18 @@ class TransactionsController < ApplicationController
     if @transaction.save
       puts "params: #{params.inspect}"
       puts "params[:operation]: #{params[:operation].inspect}"
-      
+
       group_id = params[:category_id]
-      GroupOperation.create(group_id: group_id, operation_id: @transaction.id)
-      
-      redirect_to category_transactions_path(@category), notice: "Transaction created!"
+      GroupOperation.create(group_id:, operation_id: @transaction.id)
+
+      redirect_to category_transactions_path(@category), notice: 'Transaction created!'
     else
       puts @transaction.errors.inspect
-      flash[:error] = @transaction.errors.full_messages.join(", ")
+      flash[:error] = @transaction.errors.full_messages.join(', ')
       render :new
     end
   end
-  
+
   private
 
   def transaction_params
