@@ -1,7 +1,9 @@
 class Group < ApplicationRecord
-  has_many :group_operations
-  has_many :operations, through: :group_operations
+  belongs_to :user, class_name: 'User'
 
-  validates :name, presence: true
-  validates :icon, presence: true
+  has_many :group_operations, dependent: :destroy
+  has_many :operations, through: :group_operations
+  # has_many :operations, through: :group_operations, source: :group_operation
+
+  validates :name, :icon, presence: true
 end

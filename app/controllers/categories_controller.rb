@@ -11,10 +11,12 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Group.new(category_params)
+    @category.user_id = current_user.id
+
     if @category.save
       redirect_to categories_path, notice: 'Category created!'
     else
-      render :new_category_page
+      render new_category_path
     end
   end
 
@@ -23,6 +25,6 @@ class CategoriesController < ApplicationController
   private
 
   def category_params
-    params.permit(:name, :icon)
-  end
+    params.require(:group).permit(:name, :icon)
+  end  
 end

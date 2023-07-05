@@ -1,5 +1,35 @@
-<h1>Transactions#transactions_page</h1>
-<p>Find me in app/views/transactions/new_transactions_page.html.erb</p>
+<h1>Create a new transaction</h1>
 
-<p>I am a new transactions page</p>
+<% if flash[:error] %>
+  <div class="alert alert-danger">
+    <%= flash[:error] %>
+  </div>
+<% end %>
 
+<%= form_with model: [@category, @transaction], url: category_transactions_path(@category) do |form| %>
+  <% if @transaction.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+    <ul>
+      <% @transaction.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, required: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.number_field :amount, required: true %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Save", class: "btn btn-primary" %>
+    <%= link_to "Back", category_transactions_path(@category), class: "btn btn-secondary" %>
+  </div>
+<% end %>
