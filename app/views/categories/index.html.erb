@@ -1,5 +1,24 @@
-<h1>Home#home_page</h1>
-<p>Find me in app/views/home/home_page.html.erb</p>
+<h1>Categories</h1>
 
-<p>I am a home page</p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Icon</th>
+      <th>Total Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @group.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+        <td><%= category.icon %></td>
+        <td><%= category.operations.sum(:amount) %></td>
+        <td><%= link_to 'View Transactions', category_transactions_path(category_id: category.id) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<a href="<%= new_category_path %>">Add a New Category</a>
 

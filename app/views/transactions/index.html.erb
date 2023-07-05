@@ -1,0 +1,26 @@
+<h1>Transactions for Category: <%= @category.name %></h1>
+
+<p>Total Amount: <%= @total_amount %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @transactions.each do |transaction| %>
+      <tr>
+        <td><%= transaction.name %></td>
+        <td><%= transaction.amount %></td>
+        <td><%= transaction.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Add a new transaction", new_category_transaction_path(category_id: @category.id), class: "btn btn-primary" %>
+<%= link_to "< Back", categories_path, class: "btn btn-secondary" %>
+

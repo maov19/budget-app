@@ -1,2 +1,18 @@
-<h1>Categories#new_category_page</h1>
-<p>Find me in app/views/categories/new_category_page.html.erb</p>
+<%= form_with model: @category, url: categories_path, local: true do |form| %>
+  <%= form.fields_for :group do |group_form| %>
+    <div class="field">
+      <%= group_form.label :name %>
+      <%= group_form.text_field :name, required: true %>
+    </div>
+
+    <div class="field">
+      <%= group_form.label :icon %>
+      <%= group_form.text_field :icon, required: true %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit "Create Category", class: "btn btn-primary" %>
+    <%= link_to "Cancel", categories_path, class: "btn btn-secondary" %>
+  </div>
+<% end %>
