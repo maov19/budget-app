@@ -30,8 +30,10 @@
   .categories {
     display: flex;
     flex-direction: row;
-    width: 90vw;
+    width: 80vw;
+    padding: 0 0vw 0 8vw;
     height: 10vw;
+    align-items: center;
     justify-content: space-around;
     cursor: pointer;
     font-size: 1.1rem;
@@ -44,12 +46,11 @@
   }
 
   .name-date {
+    width: 60%;
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     height: auto;
-    margin-left: -14rem;
   }
 
   .date {
