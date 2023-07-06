@@ -9,7 +9,7 @@
   height: 20%;
   color: white;
   font-weight: 100;
-  font-family: Proxima Nova Light;
+  font-family: Proxima Nova Light, sans-serif;
 }
 
 .recent-ancient {
@@ -62,7 +62,7 @@ img {
 }
 
 .amount {
-  font-family: Proxima Nova Light;
+  font-family: Proxima Nova Light, sans-serif;
   font-weight: bold;
   font-size: 1.4rem;
 }
