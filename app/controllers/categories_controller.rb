@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @group = Group.all
+    @group = current_user.groups
   end
 
   def new_category_page

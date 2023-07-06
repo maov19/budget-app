@@ -99,3 +99,17 @@ a {
   width: 80vw;
   text-decoration: none;
 }
+
+.logout {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  background-color: #1d3d6360;
+  color: white;
+  font-family: "proxima-nova-light", sans-serif;
+  width: 82vw;
+  text-decoration: none;
+  border: none;
+  font-size: 1.2rem;
+
+}

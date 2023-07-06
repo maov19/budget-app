@@ -19,7 +19,7 @@
 
 <div class="group-sum">
   <h1><%= @category.name %></h1>
-  <p class="total-sum"><%= @total_amount %></p>
+  <p class="total-sum">$<%= @total_amount %></p>
 </div>
 <hr class="big-separator">
     <% @transactions.each do |transaction| %>

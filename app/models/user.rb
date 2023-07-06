@@ -9,4 +9,12 @@ class User < ApplicationRecord
 
   validates :name, presence: true, length: { minimum: 3 }
   validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }
+  
+  def can_manage_group?(group)
+    group.owned_by?(self)
+  end
+    
+  def can_manage_operation?(operation)
+    operation.owned_by?(self)
+  end
 end
