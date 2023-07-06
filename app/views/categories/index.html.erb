@@ -1,24 +1,34 @@
-<h1>Categories</h1>
+<div class="container">
+<div class="main-title blue">
+  <h1>CATEGORIES</h1>
+  <div class="recent-ancient">
+    <p class="before"></p>
+    <div class="recent">
+      <p>Most recent</p>
+      <div class="dot"></div>
+    </div>
+    <p class="ancient">Most ancient</p>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Icon</th>
-      <th>Total Amount</th>
-    </tr>
-  </thead>
-  <tbody>
+
+
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
     <% @group.each do |category| %>
-      <tr>
-        <td><%= category.name %></td>
-        <td><%= category.icon %></td>
-        <td><%= category.operations.sum(:amount) %></td>
-        <td><%= link_to 'View Transactions', category_transactions_path(category_id: category.id) %></td>
-      </tr>
+      <div onclick="window.location='<%= category_transactions_path(category_id: category.id) %>';" class="categories">
+      <%= image_tag category.icon.url if category.icon.present? %>
+        <div class="name-date">
+          <p><%= category.name %></p>
+          <p class="date"><%= category.created_at.strftime("%d %b %y") %></p>
+        </div>  
+        <p class="amount">$<%= category.operations.sum(:amount) %></p>
+      </div>
+      <hr class="separator">
     <% end %>
-  </tbody>
-</table>
 
-<a href="<%= new_category_path %>">Add a New Category</a>
-
+  <a href="<%= new_category_path %>" class="bottom-button green">
+    <p>NEW CATEGORY</p>
+  </a>
+</div>

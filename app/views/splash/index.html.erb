@@ -1,9 +1,11 @@
-<h1>Budgy</h1>
+<div class="container">
+    <h1 class="budgy">Budgy</h1>
 
-<p>I am a splash page</p>
+    <div class="buttons">
+        <p class="login"><a href="<%= new_user_session_path %>">LOG IN</a></p>
 
-<p><a href="<%= new_user_session_path %>">Login</a></p>
+        <p class="signup"><a href="<%= new_user_registration_path %>">SIGN UP</a></p>
 
-<p><a href="<%= new_user_registration_path %>">Sign Up</a></p>
-
-<%= button_to "Logout", logout_path, method: :delete %>
+        <%= button_to "Logout", logout_path, method: :delete %>
+    </div>
+</div>
