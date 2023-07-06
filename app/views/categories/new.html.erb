@@ -6,11 +6,11 @@
     </div>
 
     <div class="field">
-      <%= group_form.label :icon %>
-      <%= group_form.text_field :icon, required: true %>
+      <%= group_form.label :icon, "Upload Icon" %>
+      <%= group_form.file_field :icon, required: true %>
     </div>
   <% end %>
-
+  
   <div class="actions">
     <%= form.submit "Create Category", class: "btn btn-primary" %>
     <%= link_to "Cancel", categories_path, class: "btn btn-secondary" %>
