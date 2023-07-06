@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  color: white;
+}
+
+.transaction-title {
+  width: 95%;
+  height: 8rem;
+  padding: 0 0.5rem 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: "proxima-nova-light", 'Courier New', Courier, monospace;
+}
+
+.group-sum {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  margin: 1rem 0 0 1rem;
+}
+
+.total-sum {
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.big-separator {
+  width: 99%;
+  border-top: 3px solid #cccccc7c;
+}
+
+.transaction-name-date {
+  margin: 1rem 0 0 -10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+}

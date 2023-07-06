@@ -1,26 +1,42 @@
-<h1>Transactions for Category: <%= @category.name %></h1>
+<div class="container">
+    <div class="header blue">
+      <div class="transaction-title">  
+        <a href="<%= categories_path %>">
+          <%= image_tag("arrow.png", class: "back") %>
+        </a>
+        <h1 class="main-title login-title">TRANSACTIONS</h1>
+        <%= image_tag("search.png", class: "back") %>
+      </div>  
+      <div class="recent-ancient">
+        <p class="before"></p>
+        <div class="recent">
+          <p>Most recent</p>
+          <div class="dot"></div>
+        </div>
+        <p class="ancient">Most ancient</p>
+      </div>
+    </div>
 
-<p>Total Amount: <%= @total_amount %></p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Amount</th>
-      <th>Date</th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="group-sum">
+  <h1><%= @category.name %></h1>
+  <p class="total-sum"><%= @total_amount %></p>
+</div>
+<hr class="big-separator">
     <% @transactions.each do |transaction| %>
-      <tr>
-        <td><%= transaction.name %></td>
-        <td><%= transaction.amount %></td>
-        <td><%= transaction.created_at %></td>
-      </tr>
+      <div class="categories">
+        <%= image_tag @category.icon.url if @category.icon.present? %>
+        <div class="transaction-name-date">
+          <p><%= transaction.name %></p>
+          <p class="date"><%= transaction.created_at.strftime("%d %b %y") %></p>
+        </div>
+          <p class="amount">$<%= transaction.amount %></p>
+      </div>
+      <hr class="separator">
     <% end %>
-  </tbody>
-</table>
 
-<%= link_to "Add a new transaction", new_category_transaction_path(category_id: @category.id), class: "btn btn-primary" %>
-<%= link_to "< Back", categories_path, class: "btn btn-secondary" %>
+<a href="<%= new_category_transaction_path(category_id: @category.id) %>" class="bottom-button green">
+  <p>NEW TRANSACTION</p>
+</a>
+
+</div>
 
