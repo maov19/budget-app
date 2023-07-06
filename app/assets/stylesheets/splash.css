@@ -23,12 +23,12 @@ body {
 
 .container {
   font-family: "proxima-nova-light", 'Courier New', Courier, monospace;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .splash {
@@ -38,51 +38,50 @@ body {
 
 /* Center Budgy vertically and horizontally */
 .budgy {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    height: 80%;
-    font-family: "Caprasimo", cursive;
-    font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 80%;
+  font-family: "Caprasimo", cursive;
+  font-size: 4rem;
 }
 
-  .buttons {
-    height: 20%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+.buttons {
+  height: 20%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-  
-  /* Style Login button */
-  .login {
-    margin: 0;
-    padding: 1rem;
-    text-align: center;
-    background-color: #3778c2;
-    font-family: "proxima-nova-light", sans-serif;
-    width: 80vw;
-    text-decoration: none;
-  }
 
-  .login a {
-    color: white;
-  }
-  
-  /* Style Signup button */
-  .signup {
-    margin: 0;
-    padding: 1rem;
-    text-align: center;
-    background-color: white;
-    color: black;
-    font-family: "proxima-nova-light", sans-serif;
-    width: 80vw;
-    text-decoration: none;
-  }
+/* Style Login button */
+.login {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  background-color: #3778c2;
+  font-family: "proxima-nova-light", sans-serif;
+  width: 80vw;
+  text-decoration: none;
+}
 
-  a {
-    text-decoration: none;
-  }
-  
+a {
+  text-decoration: none;
+}
+
+.login a {
+  color: white;
+}
+
+/* Style Signup button */
+.signup {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  background-color: white;
+  color: black;
+  font-family: "proxima-nova-light", sans-serif;
+  width: 80vw;
+  text-decoration: none;
+}
