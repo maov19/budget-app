@@ -2,8 +2,6 @@ databases:
   - name: mysite
     databaseName: mysite
     user: mysite
-    instanceType: "Starter"
-
 
 services:
   - type: web
