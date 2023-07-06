@@ -9,6 +9,7 @@
   height: 20%;
   color: white;
   font-weight: 100;
+  font-family: Proxima Nova Light;
 }
 
 .recent-ancient {
@@ -38,8 +39,9 @@
   align-items: center;
   justify-content: space-around;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-top: 0.5rem;
+  font-weight: bold;
 }
 
 img {
@@ -60,7 +62,9 @@ img {
 }
 
 .amount {
-  font-weight: bolder;
+  font-family: Proxima Nova Light;
+  font-weight: bold;
+  font-size: 1.4rem;
 }
 
 .separator {

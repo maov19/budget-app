@@ -1,11 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
 @import url('/app/assets/font/stylesheet.css');
 
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url('app/assets/fonts/ProximaNova-Bold.ttf') format('opentype'); /* Update the path and format as per your font file */
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src: url('app/assets/fonts/ProximaNova-Light.ttf') format('opentype'); /* Update the path and format as per your font file */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body {
   margin: 0;
   padding: 0;
   font-weight: 100;
-  font-family: "proxima-nova-light", 'Courier New', Courier, monospace;
+  font-family: 'Proxima Nova Bold', Arial, sans-serif;
   color: #434b547e;
 }
 
@@ -22,7 +37,7 @@ body {
 }
 
 .container {
-  font-family: "proxima-nova-light", 'Courier New', Courier, monospace;
+  font-family: 'Proxima Nova Light', Arial, sans-serif;
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -43,7 +58,7 @@ body {
   justify-content: center;
   align-content: center;
   height: 80%;
-  font-family: "Caprasimo", cursive;
+  font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 4rem;
 }
 
@@ -61,7 +76,7 @@ body {
   padding: 1rem;
   text-align: center;
   background-color: #3778c2;
-  font-family: "proxima-nova-light", sans-serif;
+  font-family: 'Proxima Nova Bold', Arial, sans-serif;
   width: 80vw;
   text-decoration: none;
 }
