@@ -2,12 +2,8 @@
     <h1 class="budgy">Budgy</h1>
 
     <div class="buttons">
-        <% if user_signed_in? %>
-            <%= button_to "LOGOUT", logout_path, method: :delete, class:"logout" %>
-        <% end %>    
-        </br>
         <p class="login"><a href="<%= new_user_session_path %>">LOG IN</a></p>
 
-        <p class="signup"><a href="<%= new_user_registration_path %>">SIGN UP</a></p>
+        <p class="signup"><a href="<%= new_user_registration_path %>">SIGN UP</a></p>  
     </div>
 </div>
