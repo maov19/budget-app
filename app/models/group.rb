@@ -6,4 +6,8 @@ class Group < ApplicationRecord
   has_many :operations, through: :group_operations
 
   validates :name, :icon, presence: true
+
+  def owned_by?(user)
+    user_id == user.id
+  end
 end

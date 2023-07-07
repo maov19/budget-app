@@ -75,7 +75,7 @@ body {
   padding: 1rem;
   text-align: center;
   background-color: #3778c2;
-  font-family: 'Proxima Nova Bold', Arial, sans-serif;
+  font-family: 'Proxima Nova Light', Arial, sans-serif;
   width: 80vw;
   text-decoration: none;
 }
@@ -95,7 +95,7 @@ a {
   text-align: center;
   background-color: white;
   color: black;
-  font-family: "proxima-nova-light", sans-serif;
+  font-family: 'Proxima Nova Light', Arial, sans-serif;
   width: 80vw;
   text-decoration: none;
 }

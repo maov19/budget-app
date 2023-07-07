@@ -42,7 +42,6 @@ form {
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: aliceblue;
 }
 
 .input {
@@ -59,7 +58,7 @@ input:focus {
 
 input::placeholder,
 textarea::placeholder {
-  color: #999; /* replace with your desired color */
+  color: #999;
 }
 
 .forgot {
