@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="header blue">
+      <div class="transaction-title">  
+        <a href="<%= categories_path %>">
+          <%= image_tag("arrow.png", class: "back") %>
+        </a>
+        <h1 class="main-title login-title">ADD CATEGORY</h1>
+        <%= image_tag("search.png", class: "back") %>
+      </div>  
+    </div>
+    
+    <%= form_with(model: @category, url: categories_path, local: true, class: "new-form") do |form| %>
+      <%= form.fields_for :group do |group_form| %>
+        <div class="field">
+          <%= group_form.text_field :name, required: true, class: "input", placeholder: "Name" %>
+        </div>
+        <div class="field upload-picture">
+          <%= image_tag("user.png", class: "sample-picture") %>
+          <p>Upload icon</p>
+          <%= group_form.file_field :icon, required: true, class: "input", placeholder: "Upload icon"  %>
+        </div>
+      <% end %> 
+    <div class="new-button-container">
+      <%= form.submit "CREATE", class:"new-button green" %>
+    </div>
+  <% end %>
+</div>

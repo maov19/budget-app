@@ -1,0 +1,28 @@
+<div class="container login-form">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="title-container blue">
+    <a href="<%= root_path %>">
+      <%= image_tag("arrow.png", class: "back") %>
+    </a>
+    <h1 class="main-title login-title">LOGIN</h1>
+    <%= f.submit "Log In", class: "login-button blue"%>
+  </div>
+      <div class="field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input", placeholder: "Email" %>
+      </div>
+
+      <div class="field">
+        <%= f.password_field :password, autocomplete: "current-password", class: "input", placeholder: "Password" %>
+      </div>
+
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+      <div class="forgot">
+        <%= link_to "Forgot password?", new_user_password_path, class: "grey" %>
+      </div>
+
+    
+  <% end %>
+
+</div>

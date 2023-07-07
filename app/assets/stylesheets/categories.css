@@ -1,0 +1,94 @@
+.main-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 20%;
+  color: white;
+  font-weight: 100;
+  font-family: Proxima Nova Light, sans-serif;
+}
+
+.recent-ancient {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 30%;
+  font-size: 1.5rem;
+}
+
+.before,
+.ancient,
+.recent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+  width: 33%;
+}
+
+.categories {
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  padding: 0 0 0 8vw;
+  height: 10vw;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+img {
+  width: 9vw;
+  height: 9vw;
+}
+
+.name-date {
+  width: 60%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.date {
+  font-size: 0.8rem;
+}
+
+.amount {
+  font-family: Proxima Nova Light, sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.separator {
+  margin-bottom: 20px;
+  border: none;
+  border-top: 1px solid #cccccc91;
+  width: 80%;
+}
+
+.bottom-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: auto;
+  width: 100%;
+  height: 10%;
+}
+
+.bottom-button p {
+  display: flex;
+  justify-content: center;
+  border: solid white 1px;
+  border-radius: 0.2rem;
+  padding: 1rem;
+  width: 90%;
+}

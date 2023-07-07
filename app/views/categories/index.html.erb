@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="header blue">
+      <div class="transaction-title">  
+        <a href="<%= root_path %>">
+          <%= image_tag("arrow.png", class: "back") %>
+        </a>
+        <h1 class="main-title login-title">CATEGORIES</h1>
+        <%= image_tag("search.png", class: "back") %>
+      </div>  
+      <div class="recent-ancient">
+        <p class="before"></p>
+        <div class="recent">
+          <p>Most recent</p>
+          <div class="dot"></div>
+        </div>
+        <p class="ancient">Most ancient</p>
+      </div>
+    </div>
+
+    <div class="group-sum">
+      <h1>Gift credit</h1>
+      <p class="total-sum">$0.00</p>
+    </div>
+
+    <hr class="big-separator">
+
+    <% @group.each do |category| %>
+      <div onclick="window.location='<%= category_transactions_path(category_id: category.id) %>';" class="categories">
+      <%= image_tag category.icon.url if category.icon.present? %>
+        <div class="name-date">
+          <p><%= category.name %></p>
+          <p class="date"><%= category.created_at.strftime("%d %b %y") %></p>
+        </div>  
+        <p class="amount">$<%= category.operations.sum(:amount) %></p>
+      </div>
+      <hr class="separator">
+    <% end %>
+
+  <a href="<%= new_category_path %>" class="bottom-button green">
+    <p>NEW CATEGORY</p>
+  </a>
+</div>

@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+@import url('/app/assets/font/stylesheet.css');
+
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url('app/assets/fonts/ProximaNova-Bold.ttf') format('opentype'); /* Update the path and format as per your font file */
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src: url('app/assets/fonts/ProximaNova-Light.ttf') format('opentype'); /* Update the path and format as per your font file */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+  font-family: 'Proxima Nova Bold', Arial, sans-serif;
+  color: #434b547e;
+}
+
+.blue {
+  background-color: #3778c2;
+}
+
+.green {
+  background-color: #5fb523;
+}
+
+.grey {
+  color: #434b547e;
+}
+
+.container {
+  font-family: 'Proxima Nova Light', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.splash {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Center Budgy vertically and horizontally */
+.budgy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 80%;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 4rem;
+}
+
+.buttons {
+  height: 20%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Style Login button */
+.login {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  background-color: #3778c2;
+  font-family: 'Proxima Nova Light', Arial, sans-serif;
+  width: 80vw;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.login a {
+  color: white;
+}
+
+/* Style Signup button */
+.signup {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  background-color: white;
+  color: black;
+  font-family: 'Proxima Nova Light', Arial, sans-serif;
+  width: 80vw;
+  text-decoration: none;
+}
