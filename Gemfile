@@ -80,3 +80,5 @@ gem 'devise'
 gem 'carrierwave'
 
 gem 'cancancan'
+
+gem 'letter_opener'
