@@ -115,7 +115,7 @@ https://mysite-f67g.onrender.com/
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Improve styles of the project**
+- **Implement side-bar menu**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
