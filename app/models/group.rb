@@ -8,6 +8,6 @@ class Group < ApplicationRecord
   validates :name, :icon, presence: true
 
   def owned_by?(user)
-    self.user_id == user.id
+    user_id == user.id
   end
 end

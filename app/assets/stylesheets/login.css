@@ -58,7 +58,7 @@ input:focus {
 
 input::placeholder,
 textarea::placeholder {
-  color: #999; 
+  color: #999;
 }
 
 .forgot {

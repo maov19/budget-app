@@ -5,8 +5,8 @@ class Operation < ApplicationRecord
 
   validates :name, presence: true
   validates :amount, presence: true, numericality: { allow_nil: false }
-  
+
   def owned_by?(user)
-    self.author_id == user.id
+    author_id == user.id
   end
 end

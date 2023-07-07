@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Group, type: :model do
   let(:user) { User.new(email: 'test@example.com', password: 'password') }
-  let(:group) { Group.new(name: 'Sample Group', icon: 'sample.jpg', user: user) }
+  let(:group) { Group.new(name: 'Sample Group', icon: 'sample.jpg', user:) }
 
   subject { group }
 
